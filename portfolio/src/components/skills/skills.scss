@@ -1,0 +1,71 @@
+@import "../../global.scss";
+
+
+.contact{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        font-size: 40px;
+
+    }
+    ul{
+        margin: 10px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+       
+    }
+    .container{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .item{
+            width: 300px;
+            height: 200px;
+            border-radius: 20px;
+            border: 1px solid lightgray;
+            margin: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            scroll-behavior: smooth ;
+            @include mobile{
+                height: 100px;
+                width: 200px;
+                
+               
+            }
+
+            h3{
+                position: absolute;
+                font-size: 20px;
+            }
+
+            img{
+                width: fit-content;
+                height: 100px;
+                object-fit: cover;
+                z-index: 1;
+            }
+
+            &:hover{
+                background-color: $mainColor;
+                img{
+                    opacity: 0.2;
+                    z-index: 0;
+                }
+            }
+            
+        }
+    }
+}
