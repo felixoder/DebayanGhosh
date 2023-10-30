@@ -1,18 +1,14 @@
 export const Frontend = [
     {
         id:1,
-        title:"HTML",
-        img:"assets/html.png"
+        title:"HTML-CSS",
+        img:"assets/html-css.png"
 
         
     }, 
 
     
-    {
-        id:2,
-        title:"CSS",
-        img:"assets/css.png"
-    },
+    
     {
         id:3,
         title:"JavaScript",
