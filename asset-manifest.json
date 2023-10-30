@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DebayanGhosh/static/css/main.76efd2aa.css",
+    "main.js": "/DebayanGhosh/static/js/main.9826c2ca.js",
+    "index.html": "/DebayanGhosh/index.html",
+    "main.76efd2aa.css.map": "/DebayanGhosh/static/css/main.76efd2aa.css.map",
+    "main.9826c2ca.js.map": "/DebayanGhosh/static/js/main.9826c2ca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76efd2aa.css",
+    "static/js/main.9826c2ca.js"
+  ]
+}
