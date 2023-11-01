@@ -65,7 +65,7 @@
             position: relative;
             transition: all 0.5s ease;
             cursor: pointer;
-          
+            overflow: hidden;
             @include mobile{
                 width: 130px;
                 height: 120px;

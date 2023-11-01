@@ -49,7 +49,7 @@ export default function Portfolio() {
   return (
     <div className="portfolio" id="portfolio">
       <h1>Portfolio</h1>
-      <p>Hover to View the projects</p>
+    
       <ul>
         {list.map(item=>
           <PortfolioList title={item.title} active={selected === item.id} setSelected={setSelected}  id={item.id}/>
