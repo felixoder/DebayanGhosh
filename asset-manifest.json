@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/DebayanGhosh/static/css/main.0e9638c5.css",
-    "main.js": "/DebayanGhosh/static/js/main.0bd8f863.js",
+    "main.css": "/DebayanGhosh/static/css/main.c78ff1a7.css",
+    "main.js": "/DebayanGhosh/static/js/main.5871b2ff.js",
     "index.html": "/DebayanGhosh/index.html",
-    "main.0e9638c5.css.map": "/DebayanGhosh/static/css/main.0e9638c5.css.map",
-    "main.0bd8f863.js.map": "/DebayanGhosh/static/js/main.0bd8f863.js.map"
+    "main.c78ff1a7.css.map": "/DebayanGhosh/static/css/main.c78ff1a7.css.map",
+    "main.5871b2ff.js.map": "/DebayanGhosh/static/js/main.5871b2ff.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e9638c5.css",
-    "static/js/main.0bd8f863.js"
+    "static/css/main.c78ff1a7.css",
+    "static/js/main.5871b2ff.js"
   ]
 }
