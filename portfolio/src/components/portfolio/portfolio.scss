@@ -17,10 +17,10 @@
     }
 
     h1{
-        font-size: 40px;
+        font-size: 25px;
 
         @include mobile{
-            font-size: 20px;
+            font-size: 15px;
 
         }
 
@@ -53,8 +53,8 @@
         }
 
         .item{
-            width: 290px;
-            height: 190px;
+            width: 100px;
+            height: 100px;
             border-radius: 20px;
             border: 1px solid lightgray;
             margin: 10px 20px;
@@ -65,7 +65,7 @@
             position: relative;
             transition: all 0.5s ease;
             cursor: pointer;
-          
+            overflow: hidden;
             @include mobile{
                 width: 130px;
                 height: 120px;
@@ -98,7 +98,7 @@
 
             #up{
                 position: absolute;
-                font-size: 20px;
+                font-size: 8px;
                 display: flex;
                 margin-bottom: 100px;
                 border-radius: 7px;
@@ -111,7 +111,7 @@
             }
             #down{
                 position: absolute;
-                font-size: 20px;
+                font-size: 8px;
                 display: flex;
                 margin-bottom: -100px;
                 border-radius: 7px;

@@ -7,6 +7,7 @@ import React, { useState } from 'react';
   
   export default function TextForm(props) {
   
+  
     const handleUpclick =()=>{
        
         let newText = text.toUpperCase();
@@ -65,10 +66,9 @@ import React, { useState } from 'react';
     }
     const copy = () => {
         // Get the text to copy from the state
-        
-        var text = document.getElementById('mybox')
-        text.select();
-        navigator.clipboard.writeText(text.value);
+      
+        navigator.clipboard.writeText(text);
+        document.getSelection().removeAllRanges();
         props.showAlert("The text is copied !" , "success");
       
        
@@ -92,35 +92,35 @@ import React, { useState } from 'react';
       </div>
    
 
-      <button className={`btn btn-${props.mode} mx-3 `}   onClick={handleUpclick}>
+      <button  disabled={text.length===0} className={`btn btn-${props.mode} mx-3 my-2 `}   onClick={handleUpclick}>
         Convert to UpperCase
       </button>
-      <button className={`btn btn-${props.mode} mx-3 `}  onClick={handleLwclick}>
+      <button disabled={text.length===0}  className={`btn btn-${props.mode} mx-3 my-2`}  onClick={handleLwclick}>
         Convert to LowerCase
       </button>
-      <button className={`btn btn-${props.mode} mx-3 `}   onClick={handleRevclick}>
+      <button disabled={text.length===0} className={`btn btn-${props.mode} mx-3 my-2`}   onClick={handleRevclick}>
         Make the Text Reverse
       </button>
-      <button className={`btn btn-${props.mode} mx-3 `} onClick={handlePuncvclick}>
+      <button disabled={text.length===0} className={`btn btn-${props.mode} mx-3 my-2`} onClick={handlePuncvclick}>
         Remove the Punctuations
       </button>
-      <button className={`btn btn-${props.mode} mx-3 `} onClick={handleWhiteRemvvclick}>
+      <button disabled={text.length===0} className={`btn btn-${props.mode} mx-3 my-2`} onClick={handleWhiteRemvvclick}>
         Remove the WhiteSpace
       </button>
-      <button className={`btn btn-${props.mode} mx-3 `}  onClick={handleClearvclick}>
+      <button disabled={text.length===0} className={`btn btn-${props.mode} mx-3 my-2`}  onClick={handleClearvclick}>
         Clear the Text
       </button>
-      <button className={`btn btn-${props.mode} mx-3 my-2`}   onClick={handleBinaryToDecimalclick}>
+      <button disabled={text.length===0} className={`btn btn-${props.mode} mx-3 my-2`}   onClick={handleBinaryToDecimalclick}>
         Convert Binary To Decimal
       </button>
       
     </div>
     <div className="container my-3" id="textbox"  style={{color:props.mode ==='dark' ?'white':'black '}} >
         <h1>This is The summery of the Text</h1>
-        <p> {text.trim() === "" ? 0 : text.split(/\s+/).length} words and {text.length} characters</p>
-        <p>{0.008*text.split(" ").length}Minutes Read</p>
+        <p> {text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+        <p>{0.008*text.split(" ").filter((element)=>{return element.length!==0}).length}Minutes Read</p>
         <h2>Preview</h2>
-        <h5>{text.length>0 ? text:"Enter Something to preview the Text"}</h5>
+        <h5>{text.length>0 ? text:"Nothing to preview"}</h5>
         <button  className="copybutton" onClick={copy}>Copy text</button>
     </div>
     </>

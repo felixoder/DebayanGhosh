@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-//import About from './components/About';
+import About from './components/About';
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -25,40 +25,34 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = '#232D3F';
       showAlert('Dark Mode is Enabled', 'success');
-      document.title = 'TextUtils-- Dark Mode';
+      //document.title = 'TextUtils-- Dark Mode';
     } else {
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert('Light Mode is Enabled', 'success');
-      document.title = 'TextUtils-- Light Mode';
+      //document.title = 'TextUtils-- Light Mode';
     }
   }
 
   return (
 <>
-      <Navbar title="TextUtils1" about="About Me" mode={mode} toggleMode={toggleMode} />
-      <Alert alert={alert} />
+     
+ 
 
-      <div className="container">
-  
-          <TextForm heading="Enter text to analyze" mode={mode} showAlert={showAlert} />
-          
-        
-      </div>
-  </>
-
-    /*{<Router>
+ <Router>
       <Navbar title="TextUtils1" about="About Me" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
 
       <div className="container">
         <Routes>
-          <Route exact path="/" element={<TextForm heading="Enter text to analyze" mode={mode} showAlert={showAlert} />} />
-          <Route exact path="/about" element={<About />} />
+          <Route exact path="/" element={<TextForm heading="Try TextUtils - Word Counter  , Character Counter , Remove the Extra spaces , Remove the unwanted punctuations , Convert the Binary to Decimals" mode={mode} showAlert={showAlert} />} />
+          <Route exact path="/about" element={<About  mode={mode}/>}  />
         </Routes>
       </div>
-    </Router>}
-    */
+    </Router>
+
+    </>
+
   );
 }
 

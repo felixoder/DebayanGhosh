@@ -30,13 +30,13 @@
 
 
     .slider{
-        height: 350px;
+        height: 300px;
         display: flex;
         position: absolute;
         left: 0;
         transition: all 1s ease-out;
         @include mobile{
-            height: 100vh;
+            height: 90vh;
             flex-direction: column;
             justify-content: center;
         }
